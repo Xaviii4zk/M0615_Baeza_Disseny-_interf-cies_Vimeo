@@ -173,4 +173,232 @@ body {
         line-height: 1.4;
         margin-bottom: 50px;
     }
+
+    .main3 {
+        margin-top: 40px;
+        margin-left: 15px;
+    }
+
+    .videoimg {
+        width: 368px;
+        height: 207px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .videoimg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .videoinfo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 1.35;
+        letter-spacing: -.03375rem;
+        margin-bottom: 50px;
+    }
+
+    .videoinfo span {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(10, 14, 18);
+    }
+
+    .planes h2 {
+        color: rgb(10, 14, 18);
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: -0.86px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    .planes p {
+        color: rgb(76, 88, 100);
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        margin-right: 20px;  
+    
+    }
+
+    .boton1{
+        width: 300px;
+        height: 50px;
+        background-color: rgb(20, 26, 32);
+        color: rgb(250, 252, 253);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        font-weight: bold;
+        font-size: 15px;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .separacion {
+        align-items: flex-start;
+        width: 336px;
+        height: auto;
+        margin-left: 15px;
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+
+    .explicacion p{
+        color: rgb(76, 88, 100);
+        font-weight: 500;
+        align-items: flex-start;
+    }
+
+    .explicacion span {
+        color: rgb(20, 26, 32);
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .main4 {
+        width: 100%;
+        background-color: rgb(241, 245, 249);
+
+    }
+
+    .comentarios {
+        display: flex;
+        margin: auto;   
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 450px;
+        margin-left: 10px;
+    }
+
+    .comentarios h2 {
+        color: rgb(10, 14, 18);
+        font-size: 19px;
+        font-weight: 600;
+        padding-bottom: 320px;
+    }
+
+    .main5 {
+        padding-top: 40px;
+        background-color: #141A20;
+    }
+
+    .introIA {
+        width: 368px;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+        line-height: 30px;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .introIA, .infoIA, .opcionesIA, .introIAfoto {
+        margin-left: 25px;
+
+    }
+
+    .introIAfoto {
+        margin-bottom: 50px;
+    }
+
+
+    .introIAfoto img {
+        width: 348px;
+        height: 100%;
+    }
+
+    .introIA svg path {
+        fill: white;
+    }
+
+    .introIA svg {
+        margin-left: 30px;
+    }
+
+    .introIA h2 {
+        color: rgb(250, 252, 253);
+        font-size: 29px;
+        text-align: left;
+    }
+
+    .infoIA {
+        padding: 25px;
+        background-color: rgb(25, 32, 40);
+        width: 368px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        margin-bottom: 40px;
+    }
+
+    .infoIA h3 {
+        color: rgb(250, 252, 253);
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+
+    .infoIA p {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 28px;
+        color: rgb(169, 178, 188);
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+
+    .infoIA button {
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+        background-color: rgb(250, 252, 253);
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;    
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 24px;
+        color: rgb(20, 26, 32);
+        align-items: center;
+        width: 274px;
+        height: 48.5px;
+    }
+
+    .separar_opcionesIA {
+        display: flex;
+        margin-left: 30px;
+        gap: 40px;
+    }
+
+    .opcionesIA {
+        width: 240px;
+        height: 73px;
+        margin-bottom: 40px;
+        color: rgb(250, 252, 253);
+        font-size: 18px;
+        line-height: 24.3px;
+        letter-spacing: -0.54px;
+        font-weight: 600;
+    }
+
+    .iconomas i {
+        color: white;
+    }
 }
