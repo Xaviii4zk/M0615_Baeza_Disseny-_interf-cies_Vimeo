@@ -20,6 +20,37 @@ body {
     display: none;
 }
 
+.infoextra2 button .texto-boton, .infoextra2 button i {
+    display: none;
+}
+
+.btn_Demostracion .contenedor-flecha i:first-child {
+    display: none;
+}
+
+.explicacion .contenedor-flecha i:first-child {
+    display: none;
+}
+
+.infoIA button .contenedor-flecha i:first-child {
+    display: none;
+}
+
+.infovideo .contenedor-flecha i:first-child {
+    display: none;
+}
+
+.iconoss {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.iconoss img{
+    margin-left: 30px;
+}
+
+
 .hiddenpc {
     display: block;
 }
@@ -66,7 +97,7 @@ main {
     line-height: 1.4;
     letter-spacing: -.0375rem;
     text-align: center;
-    margin: 50px auto 70px;
+    margin: 50px auto;
     color: #0A0E12;
     font-weight: bold;
 }
@@ -527,7 +558,7 @@ main {
 }
 
 .n {
-    display: none;
+    display: block;
 }
 
 .elementos_info p {
@@ -1120,6 +1151,14 @@ main {
     .boton.azul{
         position: relative;
         overflow: hidden;
+    }
+
+    .boton.azul:hover {
+        cursor: pointer;
+    }
+
+    .subheader2 svg:hover{
+        cursor: pointer;
     }
 
     .subheader2 .flechas-unirse {
@@ -1884,9 +1923,14 @@ main {
         margin: 0;
     }
 
-    .tarjeta-testimonio svg:first-child {
+    .tarjeta-testimonio svg {
         color: rgb(241, 245, 249);
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+    }
+
+    .tarjeta-testimonio svg:nth-child(2) {
+        color: rgb(241, 245, 249);
+        margin-bottom: 0px;
     }
 
     .estrellas-testimonio {
@@ -1898,6 +1942,24 @@ main {
         margin-bottom: 30px;
         margin-top: 20px;
     }
+
+    .tarjeta-testimonio .estrellas-testimonio:nth-child(3) {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .tarjeta-testimonio:nth-child(3) h2 {
+        width: 100%;
+    }
+
+    .tarjeta-testimonio:nth-child(2) h2 {
+        width: 90%;
+    }
+
+    .tarjeta-testimonio:nth-child(5) h2 {
+        width: 85%;
+    }
+
 
     .autor-testimonio {
         display: flex;
@@ -2395,6 +2457,10 @@ main {
         align-items: center;
         padding-top: 40px;
         margin-bottom: 80px;
+    }
+
+    .n {
+        display: none;
     }
 
     .nuevo img {
