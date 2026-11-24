@@ -100,7 +100,7 @@ main {
     align-items: center;
     width: 300px;
     height: 48px;
-    background-color: rgb(0, 255, 255);
+    background-color: rgb(23, 213, 255);
     border: none;
     border-radius: 10px;
     font-size: 1rem;
@@ -186,6 +186,7 @@ main {
     height: 207px;
     overflow: hidden;
     border-radius: 20px;
+    position: relative;
 }
 
 .videoimg img {
@@ -462,12 +463,13 @@ main {
 
 .infovideo p, .infovideo2 p {
     width: 368px;
-    color: rgb(169, 178, 188);
+    color: rgb(76, 88, 100);
     font-weight: 500;
     line-height: 20.8px;
     font-size: 15.24px;
     margin-right: 15px;
     margin-bottom: 25px;
+    font-weight: 500;
 }
 
 .infovideo2 p {
@@ -686,7 +688,7 @@ main {
     margin-bottom: 15px;
 }
 
-.nuevo span {
+.nuevo2 {
     margin-top: 20px;
     background-color: rgb(23, 213, 255);
     width: 44px;
@@ -1015,6 +1017,72 @@ main {
         overflow: hidden;
     }
 
+    .btn_Demostracion {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .btn_Demostracion::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.15);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+    }
+
+    .btn_Demostracion:hover::before {
+        transform: translateX(0);
+    }
+
+    .btn_Demostracion span,
+    .btn_Demostracion i {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn_Demostracion .contenedor-flecha {
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .btn_Demostracion .contenedor-flecha i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .btn_Demostracion .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .btn_Demostracion .contenedor-flecha i:last-child {
+        transform: translateX(-22px);
+    }
+
+    .btn_Demostracion:hover .contenedor-flecha i:first-child {
+        transform: translateX(22px);
+    }
+
+    .btn_Demostracion:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
+    }
+
     .flechas {
         width: 100%;
         height: 100%;
@@ -1047,6 +1115,81 @@ main {
 
     .boton:hover .flechas i:last-child {
         transform: translateX(0);
+    }
+
+    .boton.azul{
+        position: relative;
+        overflow: hidden;
+    }
+
+    .subheader2 .flechas-unirse {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .subheader2 .flechas-unirse i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .subheader2 .flechas-unirse i:first-child {
+        transform: translateX(0);
+    }
+
+    .subheader2 .flechas-unirse i:last-child {
+        transform: translateX(22px);
+    }
+
+    .subheader2 .boton:hover .flechas-unirse i:first-child {
+        transform: translateX(-22px);
+    }
+
+    .subheader2 .boton:hover .flechas-unirse i:last-child {
+        transform: translateX(0);
+    }
+    
+    .boton.azul::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.15);
+        transform: translateX(100%);
+        transition: transform 350ms ease-in-out;
+        z-index: 0;
+    }
+
+    .boton.azul:hover::before {
+        transform: translateX(0);
+    }
+
+    .boton.transparente {
+        transition: color 0.3s ease;
+    }
+
+    .boton.transparente:hover {
+        color: #b0b0b0;
+    }
+
+    .boton.transparente .contenedor-flecha i {
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .boton.transparente:hover .contenedor-flecha i {
+        color: #b0b0b0;
     }
 
     .tarjeta-video {
@@ -1083,26 +1226,60 @@ main {
         transition: transform 0.3s ease;
     }
 
+    .boton-play {
+        transition: background-color 1s;
+    }
+
+    .boton-play i {
+        transition: transform 0.3s ease;
+        color: #111820;
+    }
+
     .boton-play i:first-child {
         transform: translateX(0);
     }
 
     .boton-play i:last-child {
-        transform: translateX(-200%);
+        transform: translateX(360%);
     }
 
     .tarjeta-video:hover .boton-play i:first-child {
-        transform: translateX(200%);
+        transform: translateX(-360%);
+        transition-delay: 0s;
     }
 
     .tarjeta-video:hover .boton-play i:last-child {
         transform: translateX(0);
+        transition-delay: 0.10s;
+    }
+
+    .tarjeta-video {
+        transition: background-color 1s, color 1s;
+    }
+
+    .tarjeta-video:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .tarjeta-video:hover .boton-play {
+        background-color: black;
+    }
+
+    .tarjeta-video:hover .boton-play i {
+        color: white;
+    }
+
+    .boton-play i {
+        transition: transform 0.1s ease;
     }
 
     .tarjeta-video p {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 22px;
+        width: 35%;
+        transition: color 1s;
     }
 
     .subheader {
@@ -1116,6 +1293,15 @@ main {
         display: flex;
         flex-direction: row;
         gap: 10px;
+    }
+
+
+    .bajarboton {
+        margin-top: 72px;
+    }
+
+    .subirboton {
+        margin-top: -22px;
     }
 
     .subheader h3 {
@@ -1241,8 +1427,8 @@ main {
         cursor: pointer;
     }
 
-    .infoextra2 span {
-        width: 60%;
+    .infoextra2 .texto-boton {
+        width: 65%;
         font-weight: 600;
     }
 
@@ -1254,10 +1440,156 @@ main {
         display: none;
     }
 
+    .infoextra2 button {
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s ease;
+    }
+
+    .infoextra2 button::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .infoextra2 button:hover::before {
+        transform: translateX(0);
+    }
+
+    .infoextra2 button:hover {
+        color: black;
+    }
+
+    .infoextra2 button span,
+    .infoextra2 button i {
+        position: relative;
+        z-index: 1;
+    }
+
+    .infoextra2 button i {
+        overflow: hidden;
+    }
+
+    .infoextra2 .contenedor-flecha {
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+
+    .infoextra2 .contenedor-flecha i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .infoextra2 .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .infoextra2 .contenedor-flecha i:last-child {
+        transform: translateX(-22px);
+    }
+
+    .infoextra2 button:hover .contenedor-flecha i:first-child {
+        transform: translateX(22px);
+    }
+
+    .infoextra2 button:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
+    }
+
     .main3 {
         margin: 0 auto;
         width: 1400px;
         padding: 40px 110px;
+    }
+
+    .solucion_planes button {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        transition: color 0.3s ease;
+        border: none;
+    }
+
+    .solucion_planes button::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+    }
+
+    .solucion_planes button:hover::before {
+        transform: translateX(0);
+    }
+
+    .solucion_planes button:hover {
+        color: black;
+    }
+
+    .solucion_planes button span,
+    .solucion_planes button i {
+        position: relative;
+        z-index: 1;
+    }
+
+    .solucion_planes button .contenedor-flecha {
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .solucion_planes button .contenedor-flecha i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .solucion_planes button .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .solucion_planes button .contenedor-flecha i:last-child {
+        transform: translateX(-22px);
+    }
+
+    .solucion_planes button:hover .contenedor-flecha i:first-child {
+        transform: translateX(22px);
+    }
+
+    .solucion_planes button:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
     }
 
     .solucion_planes h2 {
@@ -1297,6 +1629,116 @@ main {
         overflow: none;
     }
 
+    .tarjeta-staff {
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        width: 90%;
+        height: 128px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 28px;
+        background-color: rgba(230, 220, 213, 0.82);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 14px;
+        color: #111820;
+        border: none;
+    }
+
+    .tarjeta-staff:hover .staff-play i {
+        color: white;
+    }
+
+    .staff-icono {
+        width: 56px;
+        height: 56px;
+    }
+
+    .staff-nombre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .staff-nombre h3 {
+        font-size: 19px;
+        margin: 0;
+    }
+
+    .staff-nombre span,
+    .staff-miembro span {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .staff-separador {
+        font-size: 24px;
+    }
+
+    .staff-miembro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .staff-play {
+        width: 96px;
+        height: 54px;
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(23, 213, 255);
+        color: #111820;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .staff-play {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        background-color: rgb(23, 213, 255);
+    }
+
+    .staff-play::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .tarjeta-staff:hover .staff-play::before {
+        transform: translateX(0);
+    }
+
+    .staff-play i {
+        position: relative;
+    }
+
+    .tarjeta-staff {
+        transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    .tarjeta-staff:hover {
+        background-color: #111A20;
+        color: white;
+    }
+
+    .tarjeta-staff:hover h3,
+    .tarjeta-staff:hover span,
+    .tarjeta-staff:hover .staff-separador {
+        color: white;
+    }
+
     .separar_planes {
         display: flex;
         gap: 60px;
@@ -1323,6 +1765,72 @@ main {
         margin-bottom: 50px;
     }
 
+    .separacion {
+        transition: color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .separacion:hover {
+        color: rgb(160, 165, 170);
+    }
+
+    .separacion .explicacion > span {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .separacion .contenedor-flecha {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .separacion .contenedor-flecha i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .separacion .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .separacion .contenedor-flecha i:last-child {
+        transform: translateX(-22px);
+    }
+
+    .separacion:hover .contenedor-flecha i:first-child {
+        transform: translateX(22px);
+    }
+
+    .separacion:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
+    }
+
+    .separacion {
+        color: rgb(20, 26, 32);
+        transition: color 0.3s ease;
+    }
+
+    .separacion:hover {
+        color: rgb(160, 165, 170);
+    }
+
+    .separacion .explicacion span,
+    .separacion .explicacion p {
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+
     .main4 {
         margin: 0 auto;
         width: 100%;
@@ -1332,6 +1840,85 @@ main {
         margin: 0 auto;
         padding-top: 50px;
     }
+
+
+    .tarjeta-testimonio {
+        background-color: #f9fbfd;
+        border-radius: 28px;
+        padding: 50px 30px 55px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+        height: 300px;
+        margin: 0 auto;
+        transform: translateY(-250px);
+    }
+
+    .icono-comillas {
+        width: 70px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 35px;
+    }
+
+    .tarjeta-testimonio h2 {
+        font-size: 34px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #171d24;
+        max-width: 650px;
+        margin: 0 0 35px;
+    }
+
+    .estrellas-testimonio {
+        display: flex;
+        gap: 8px;
+        color: #e7ed45;
+        font-size: 23px;
+        margin-bottom: 48px;
+    }
+
+    .autor-testimonio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .foto-autor {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .nombre-autor {
+        font-size: 19px;
+        font-weight: 600;
+        color: #171d24;
+    }
+
+    .icono-verificado {
+        width: 22px;
+        height: 22px;
+    }
+
+    .separador-autor {
+        width: 20px;
+        height: 35px;
+        object-fit: contain;
+        margin: 0 2px;
+    }
+
+    .logo-marca {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+    }
+
 
     .main5 {
         width: 100%;
@@ -1370,6 +1957,86 @@ main {
         margin-left: -45px;
     }
 
+
+    .infoIA button {
+        justify-content: center;
+        width: 200px;
+        gap: 15px;
+    }
+
+    .infoIA button {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        transition: color 0.3s ease;
+        border: none;
+    }
+
+    .infoIA button::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgb(20, 26, 32);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .infoIA button:hover::before {
+        transform: translateX(0);
+    }
+
+    .infoIA button:hover {
+        color: white;
+    }
+
+    .infoIA button span,
+    .infoIA button i {
+        position: relative;
+        z-index: 1;
+    }
+
+    .infoIA button .contenedor-flecha {
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .infoIA button .contenedor-flecha i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .infoIA button .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .infoIA button .contenedor-flecha i:last-child {
+        transform: translateX(-22px);
+    }
+
+    .infoIA button:hover .contenedor-flecha i:first-child {
+        transform: translateX(22px);
+    }
+
+    .infoIA button:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
+    }
+
     .introIA svg {
         margin-left: 0;
     }
@@ -1393,6 +2060,10 @@ main {
 
     .infoIA p {
         width: 90%;
+    }
+
+    .s {
+        display: block;
     }
 
     .introIAfoto img {
@@ -1451,8 +2122,18 @@ main {
         width: 100%;
     }
 
+    .elementos_info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
     .elementos_info span {
+        display: block;
         width: 21%;
+        height: 2px;
+        background-color: black;
     }
 
     .columnaizq3 {
@@ -1486,17 +2167,143 @@ main {
 
     .infovideo button {
         margin-right: 280px;
+        width: 300px;
     }
 
+    .infovideo button {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        transition: color 0.3s ease;
+        border: none;
+    }
+
+    .infovideo button::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .infovideo button:hover::before {
+        transform: translateX(0);
+    }
+
+    .infovideo button:hover {
+        color: black;
+    }
+
+    .infovideo button span,
+    .infovideo button i {
+        position: relative;
+        z-index: 1;
+    }
+
+    .infovideo button .contenedor-flecha {
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .infovideo button .contenedor-flecha i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .infovideo button .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .infovideo button .contenedor-flecha i:last-child {
+        transform: translateX(-22px);
+    }
+
+    .infovideo button:hover .contenedor-flecha i:first-child {
+        transform: translateX(22px);
+    }
+
+    .infovideo button:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
+    }
 
     .imgnoche {
         margin: 0 auto;
         width: 1400px;
+        position: relative;
+    }
+
+    .imgnoche .boton-play i {
+        transform: none;
+        transition: none;
     }
 
     .imgnoche img  {
         width: 100%;
         height: 650px;
+    }
+
+    .imgnoche .boton-play {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .imgnoche:hover .boton-play {
+        background-color: #111A20;
+        isolation: isolate;
+    }
+
+    .imgnoche .boton-play {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        background-color: rgb(23, 213, 255);
+    }
+
+    .imgnoche .boton-play::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #2B302D;
+        transform: translateX(100%);
+        transition: transform 0.6s ease;
+        z-index: -1;
+    }
+
+    .imgnoche:hover .boton-play::before {
+        transform: translateX(0);
+    }
+
+    .imgnoche .boton-play {
+        transition: background-color 0.6s ease;
+    }
+
+    .imgnoche:hover .boton-play {
+        background-color: #111A20;
+        isolation: isolate;
+    }
+
+    .imgnoche:hover .boton-play::before {
+        transform: translateX(0);
     }
 
     .infovideo2 {
@@ -1517,6 +2324,18 @@ main {
         width: 816px;
         font-size: 20px;
         margin-bottom: 40px;
+    }
+
+    .iconoss {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 150px;
+    }
+
+    .iconoss img {
+        margin-left: 50px;
     }
 
     .infovideo2 button {
@@ -1577,6 +2396,73 @@ main {
         margin-bottom: 40px;
     }
 
+    .nuevo button {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        transition: color 0.3s ease;
+        border:none;
+    }
+
+    .nuevo button::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .nuevo button:hover::before {
+        transform: translateX(0);
+    }
+
+    .nuevo button:hover {
+        color: black;
+    }
+
+    .nuevo button .contenedor-flecha {
+        display: block;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .nuevo button .contenedor-flecha i {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+    .nuevo button .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .nuevo button .contenedor-flecha i:last-child {
+        transform: translateX(-22px);
+    }
+
+    .nuevo button:hover .contenedor-flecha i:first-child {
+        transform: translateX(22px);
+    }
+
+    .nuevo button:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
+    }
+
     .PruebaGratis button {
         width: 180px;
         gap: 0px;
@@ -1599,6 +2485,143 @@ main {
 
     .botonDefault2 {
         width: 400px;
+    }
+
+    .PruebaGratis button .contenedor-flecha {
+        display: block;
+        width: 48px;
+        height: 28px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 7px;
+        background-color: rgb(0, 170, 207);
+    }
+
+    .PruebaGratis button:hover .contenedor-flecha {
+        background-color: rgb(25, 200, 253);
+    }
+
+    .PruebaGratis button .contenedor-flecha i {
+        position: absolute;
+        width: 48px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.6s ease-in;
+        background: none;
+    }
+
+    .PruebaGratis button .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .PruebaGratis button .contenedor-flecha i:last-child {
+        transform: translateX(-60px);
+    }
+
+    .PruebaGratis button:hover .contenedor-flecha i:first-child {
+        transform: translateX(60px);
+    }
+
+    .PruebaGratis button:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
+    }
+
+    .PruebaGratis button {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .PruebaGratis button::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.35);      
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .PruebaGratis button:hover::before {
+        transform: translateX(0);
+    }
+
+    .AtencionCliente .botonDefault2 {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .AtencionCliente .botonDefault2::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgb(23, 213, 255);
+        transform: translateX(100%);
+        transition: transform 0.6s ease;
+        z-index: -1;
+        border-radius: inherit;
+    }
+
+    .AtencionCliente .botonDefault2:hover::before {
+        transform: translateX(0);
+    }
+
+    .AtencionCliente .botonDefault2 .contenedor-flecha {
+        display: block;
+        width: 48px;
+        height: 28px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        border-radius: 7px;
+        background-color: rgb(250, 252, 253);
+        transition: background-color 0.6s ease;
+    }
+
+    .AtencionCliente .botonDefault2:hover .contenedor-flecha {
+        background-color: rgb(0, 170, 207);
+    }
+
+    .AtencionCliente .botonDefault2 .contenedor-flecha i {
+        position: absolute;
+        width: 48px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.6s ease;
+        background: none;
+    }
+
+    .AtencionCliente .botonDefault2 .contenedor-flecha i:first-child {
+        transform: translateX(0);
+    }
+
+    .AtencionCliente .botonDefault2 .contenedor-flecha i:last-child {
+        transform: translateX(-48px);
+    }
+
+    .AtencionCliente .botonDefault2:hover .contenedor-flecha i:first-child {
+        transform: translateX(48px);
+    }
+
+    .AtencionCliente .botonDefault2:hover .contenedor-flecha i:last-child {
+        transform: translateX(0);
     }
 
     .CentrarPruebas {
@@ -1693,6 +2716,11 @@ main {
 
     .enlaces {
         width: 1000px;
+    }
+
+    .columna li:hover, .grupo-enlaces li:hover, .enlaces a:hover, .opciones-privacidad a:hover, .IconoRedes svg:hover {
+        color: #13B1D4;
+        cursor: pointer;
     }
 
 }
