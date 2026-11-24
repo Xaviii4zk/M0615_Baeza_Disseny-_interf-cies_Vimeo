@@ -2037,6 +2037,17 @@ main {
         margin-left: -45px;
     }
 
+    .btn_Demostracion .contenedor-flecha i:first-child,
+    .explicacion .contenedor-flecha i:first-child,
+    .infoIA button .contenedor-flecha i:first-child,
+    .infovideo .contenedor-flecha i:first-child, .texto-boton {
+        display: block;
+    }
+
+    .infoextra2 button .texto-boton, .infoextra2 button i {
+        display: block;
+    }
+
 
     .infoIA button {
         justify-content: center;
